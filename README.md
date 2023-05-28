@@ -14,7 +14,11 @@ npm i
 ```
 
 ```
-npm run start
+npm run build
+```
+
+```
+serve -s ./build
 ```
 
 ## Что можно улучшить:
