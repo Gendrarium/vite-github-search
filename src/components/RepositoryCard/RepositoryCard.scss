@@ -1,0 +1,135 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border: 1px solid $main-color;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  min-width: 600px;
+  max-width: 700px;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  &:hover {
+    border-color: $main-color-hover;
+    box-shadow: 0px 4px 4px rgba($color: $main-color, $alpha: 0.4);
+  }
+
+  &:last-of-type {
+    margin-bottom: 0px;
+  }
+
+  @include mq(767) {
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+  }
+
+  &_full {
+    min-width: 1200px;
+    max-width: none;
+    cursor: default;
+
+    &:hover {
+      border-color: $main-color;
+      box-shadow: none;
+    }
+
+    @include mq(1279) {
+      min-width: 500px;
+    }
+
+    @include mq(767) {
+      min-width: 0;
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 24px;
+    align-self: center;
+    word-break: break-all;
+    margin-bottom: 10px;
+  }
+
+  &__full-container {
+    display: flex;
+    justify-content: space-between;
+
+    &_full {
+      padding-top: 10px;
+      border-top: 1px solid $main-color;
+
+      @include mq(1279) {
+        flex-direction: column;
+        border-top: none;
+      }
+    }
+  }
+
+  &__grid-container {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 8px 5px;
+    justify-items: start;
+
+    &_full {
+      @include mq(767) {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+
+  &__grid-title {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  &__grid-subtitle {
+    font-size: 14px;
+    max-width: 380px;
+  }
+
+  &__grid-link {
+    font-size: 14px;
+    color: $main-color-hover;
+    word-break: break-all;
+
+    &:hover {
+      color: $main-color;
+    }
+  }
+
+  &__user-container {
+    display: flex;
+    border-left: 1px solid $main-color;
+    padding-left: 5px;
+    align-items: center;
+
+    @include mq(1279) {
+      padding-left: 0;
+      padding-top: 5px;
+      margin-top: 5px;
+      border-left: none;
+      border-top: 1px solid $main-color;
+    }
+  }
+
+  &__avatar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 60px;
+  }
+
+  &__avatar {
+    border-radius: 100px;
+    width: 200px;
+    height: 200px;
+
+    @include mq(767) {
+      width: 100px;
+      height: 100px;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@import './_normalize.css';
+@import './fonts/fonts';
+@import './variables';
+@import './mixins';
+@import './global';
+
+//components
+@import '@/components/App/App.scss';
+@import '@/components/Header/Header.scss';
+@import '@/components/Paginator/Paginator.scss';
+@import '@/components/Repository/Repository.scss';
+@import '@/components/RepositoryCard/RepositoryCard.scss';
+@import '@/components/Search/Search.scss';
+@import '@/components/Footer/Footer.scss';

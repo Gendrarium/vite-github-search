@@ -1,0 +1,45 @@
+.paginator {
+  display: flex;
+
+  &__button {
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 5px;
+    color: $main-color-hover;
+    padding: 5px;
+    border: 1px solid $main-color-hover;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: white;
+
+    @include mq(767) {
+      font-size: 14px;
+      padding: 3px;
+      margin-right: 3px;
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    &_active {
+      font-weight: 500;
+      background-color: $main-color-hover;
+      color: white;
+    }
+  }
+
+  &__span {
+    color: $main-color-hover;
+    font-size: 20px;
+    align-self: flex-end;
+
+    &:first-child {
+      margin-right: 5px;
+    }
+
+    &:last-child {
+      margin-left: 5px;
+    }
+  }
+}

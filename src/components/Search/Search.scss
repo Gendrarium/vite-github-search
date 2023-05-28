@@ -1,0 +1,34 @@
+.search {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+
+  @include mq(767) {
+    padding: 20px 5px;
+  }
+
+  &__form {
+    @include mq(767) {
+      width: 100%;
+    }
+  }
+
+  &__input {
+    @extend .input;
+    box-sizing: border-box;
+    width: 600px;
+
+    @include mq(767) {
+      width: 100%;
+    }
+  }
+
+  &__data-container {
+    margin: 20px 0;
+    @include mq(767) {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.header {
+  min-height: 40px;
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: $main-color;
+
+  &__full-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  &__subtitle {
+    font-size: 14px;
+    font-weight: 400;
+  }
+}
